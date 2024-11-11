@@ -1,10 +1,10 @@
 @using Microsoft.AspNetCore.Components.Authorization
 
-<AuthorizeView Roles="Reviewer">
+<AuthorizeView Roles="Account">
     <button onclick="AddReviews">Add Reviews</button>
 </AuthorizeView>
-<AuthorizeView Roles="User, Reviewer">
-    <p>Welcome, you can browse all locations!</p>
+<AuthorizeView Roles="User, Account">
+    <p>Welcome, you can browse all the reviews!</p>
 </AuthorizeView>
 
 @code {
