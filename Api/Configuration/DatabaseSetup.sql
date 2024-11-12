@@ -30,3 +30,6 @@ create table Review
     
     foreign key (AccountId) references Account(Id)
 );
+
+insert into Account values 
+(uuid_to_bin(uuid()), 'admin', 'First name', 'last name', 'reviewer', 'email@email.com')

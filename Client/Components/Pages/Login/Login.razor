@@ -1,0 +1,37 @@
+@using Microsoft.AspNetCore.Authorization
+
+@page "/login"
+@attribute [AllowAnonymous]
+
+<div class="text-center">
+    Something or other
+    <EditForm class="form-signin mb-4" Model="@_credential" OnSubmit="@Authenticate">
+        <div class="form-group">
+            <label for="user-name">Username</label>
+            <InputText class="form-control" id="user-name" aria-describeby="emailHelp" placeholder="something e-mail" @bind-Value="@_credential.UserName"/>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <InputText type="password" class="form-control" id="password" placeholder="something password" @bind-Value="@_credential.Password"/>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="login" name="login" class="btn btn-primary">Login</button>
+        </div>
+        ...Whatever else I need for a login page here, like a sign up button
+    </EditForm>
+</div>
+
+@code {
+
+    public class Credential
+    {
+        public string UserName { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+    }
+    private readonly Credential _credential = new Credential();
+
+    private void Authenticate()
+    {
+        
+    }
+}

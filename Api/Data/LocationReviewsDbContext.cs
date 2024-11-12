@@ -1,12 +1,16 @@
+using Api.Features.Account;
+using Api.Features.Review;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using shared.Models;
 
 namespace Api.Data;
 
-public class LocationReviewsDbContext(DbContextOptions<LocationReviewsDbContext> options) : DbContext(options)
+public class LocationReviewsDbContext(DbContextOptions<LocationReviewsDbContext> options)
+    : IdentityDbContext<IdentityUser>(options)
 {
-    public DbSet<Account> Accounts { get; set; }
-    public DbSet<Review> Reviews { get; set; }
+    public DbSet<Account> Account { get; set; }
+    public DbSet<Review> Review { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
