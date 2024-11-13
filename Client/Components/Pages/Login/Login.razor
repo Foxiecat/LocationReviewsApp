@@ -1,14 +1,25 @@
+@using Client.Services
 @using Microsoft.AspNetCore.Authorization
+
+@inject AuthService AuthService
+@inject NavigationManager Navigation
+
 
 @page "/login"
 @attribute [AllowAnonymous]
+
+@if (_errorMessage != null)
+{
+    <p style="color: red">@_errorMessage</p>
+}
 
 <div class="text-center">
     Something or other
     <EditForm class="form-signin mb-4" Model="@_credential" OnSubmit="@Authenticate">
         <div class="form-group">
             <label for="user-name">Username</label>
-            <InputText class="form-control" id="user-name" aria-describeby="emailHelp" placeholder="something e-mail" @bind-Value="@_credential.UserName"/>
+            <InputText class="form-control" id="user-name" 
+                       aria-describeby="emailHelp" placeholder="something e-mail" @bind-Value="@_credential.UserName"/>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
@@ -23,15 +34,24 @@
 
 @code {
 
+    private string? _errorMessage;
     public class Credential
     {
         public string UserName { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
     }
-    private readonly Credential _credential = new Credential();
+    private readonly Credential _credential = new ();
 
-    private void Authenticate()
+    private async Task Authenticate()
     {
+        if (await AuthService.LoginAsync(_credential.UserName, _credential.Password))
+        {
+            Navigation.NavigateTo("/");
+        }
+        else
+        {
+            _errorMessage = "Invalid username or password.";
+        }
         
     }
 }

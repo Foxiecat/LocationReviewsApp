@@ -1,0 +1,25 @@
+@using Client.Services
+
+@page "/account"
+@inject AuthService AuthService
+@inject NavigationManager Navigation
+
+@if (AuthService.IsAuthenticated)
+{
+    <h3>Account page</h3>
+    <p>This is a protected page for logged in accounts</p>
+}
+else
+{
+    <p>You must be logged in to access this page</p>
+    <button @onclick="RedirectToLogin">Go to login</button>
+}
+
+@code {
+
+    public void RedirectToLogin()
+    {
+        Navigation.NavigateTo("/login");
+    }
+
+}

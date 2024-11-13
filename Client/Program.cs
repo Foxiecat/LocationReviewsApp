@@ -1,4 +1,5 @@
 using Client.Components;
+using Client.Services;
 
 namespace Client;
 public class Program
@@ -10,6 +11,7 @@ public class Program
         // Add services to the container.
         builder.Services.AddRazorComponents()
             .AddInteractiveServerComponents();
+        builder.Services.AddScoped<AuthService>();
 
         var app = builder.Build();
 

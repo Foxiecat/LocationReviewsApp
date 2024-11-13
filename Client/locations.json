@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Central Park",
+    "city": "New York",
+    "country": "USA",
+    "description": "A large public park in New York City, known for its expansive green spaces and cultural landmarks."
+  },
+  {
+    "id": 2,
+    "name": "Eiffel Tower",
+    "city": "Paris",
+    "country": "France",
+    "description": "An iconic iron tower located in the heart of Paris, offering stunning views of the city."
+  },
+  {
+    "id": 3,
+    "name": "Tokyo Tower",
+    "city": "Tokyo",
+    "country": "Japan",
+    "description": "A red and white communications tower inspired by the Eiffel Tower, with observation decks."
+  },
+  {
+    "id": 4,
+    "name": "Colosseum",
+    "city": "Rome",
+    "country": "Italy",
+    "description": "An ancient amphitheater in Rome, famous for its history and grand architectural design."
+  },
+  {
+    "id": 5,
+    "name": "Sydney Opera House",
+    "city": "Sydney",
+    "country": "Australia",
+    "description": "A world-famous performing arts center with a distinctive sail-like design, located on Sydney Harbor."
+  },
+  {
+    "id": 6,
+    "name": "Great Wall of China",
+    "city": "Beijing",
+    "country": "China",
+    "description": "An ancient series of walls and fortifications, spanning across northern China."
+  },
+  {
+    "id": 7,
+    "name": "Machu Picchu",
+    "city": "Cusco Region",
+    "country": "Peru",
+    "description": "A 15th-century Inca citadel set high in the Andes Mountains, known for its archaeological significance."
+  },
+  {
+    "id": 8,
+    "name": "Christ the Redeemer",
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "description": "A large statue of Jesus Christ located atop Mount Corcovado, overlooking Rio de Janeiro."
+  },
+  {
+    "id": 9,
+    "name": "Santorini",
+    "city": "Santorini",
+    "country": "Greece",
+    "description": "A picturesque island known for its whitewashed buildings with blue domes, and beautiful sunsets."
+  },
+  {
+    "id": 10,
+    "name": "Grand Canyon",
+    "city": "Arizona",
+    "country": "USA",
+    "description": "A massive canyon known for its size, unique geologic features, and scenic views."
+  }
+]
